@@ -20,24 +20,16 @@ def first_n_primes(n):
         num += 1
     return primes
 
-print(first_n_primes(32))
-print(first_n_primes(100))
-# /***********************************************************************
-#  Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns
-# the sum of the first `n` prime numbers.
-# Examples:
-# sumOfNPrimes(0); // => 0
-# sumOfNPrimes(1); // => 2
-# sumOfNPrimes(4); // => 17
-# ***********************************************************************/
+print(first_n_primes(10))
+print(first_n_primes(20))
 
-# function sumOfNPrimes(n) {
-#   let sum = 0;
-#   let primes = firstNPrimes(n);
+# Return sum of the first 'n' prime numbers
+def sum_of_n_primes(n):
+    sum = 0
+    primes = first_n_primes(n)
+    for i in range(len(primes)):
+        sum += primes[i]
+    return sum
 
-#   for (let i = 0;  i < primes.length; i += 1) {
-#       sum += primes[i];
-#   }
-
-#   return sum;
-# }
+print(sum_of_n_primes(3))
+print(sum_of_n_primes(10))
